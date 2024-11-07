@@ -6,8 +6,6 @@ factors:
       - value: 2
       - value: 3
       - value: 4
-      - value: 8
-      - value: 13
 treatments:
   - desc: "Single-player Game"
     factors:

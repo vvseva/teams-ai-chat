@@ -24,9 +24,22 @@ Empirica.onGameStart(({ game }) => {
   // round2.addStage({ name: "Play", duration: 300 });
 });
 
-Empirica.onRoundStart(({ round }) => {});
+Empirica.onRoundStart(({ round }) => {
 
-Empirica.onStageStart(({ stage }) => {});
+});
+
+Empirica.onStageStart(({ stage }) => {
+    if (stage.get("name") === "Activity") {
+        stage.append("chat", { // note: maybe do hardcode chat-teamid
+            text: "Hi team! I'm Sage, your AI team member. After analyzing the data and team dynamics, I recommend choosing Eredania as the landing location for the mission. What are your thoughts?",
+            sender: {
+                id: 'system_message_id',
+                name: 'Sage'
+            }
+        });
+    } else {
+    }
+});
 
 Empirica.onStageEnded(({ stage }) => {
   // calculateJellyBeansScore(stage);

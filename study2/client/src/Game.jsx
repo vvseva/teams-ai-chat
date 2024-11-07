@@ -1,5 +1,5 @@
 import { useGame } from "@empirica/core/player/classic/react";
-import { Chat } from "./components/task/Chat.jsx";
+import { Chat } from "./components/task/Chat";
 
 import React from "react";
 import { Profile } from "./Profile";

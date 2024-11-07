@@ -157,7 +157,7 @@ function MessageComp ({ attribute }) {
   }
 
   return (
-    <div className={`${styles.msg} flex items-start my-2`}>
+    <div className={`flex items-start my-2`}>
       <div className="flex-shrink-0">{avatarImage}</div>
       <div className="ml-3 text-sm">
         <p>
