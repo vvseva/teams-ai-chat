@@ -51,7 +51,7 @@ export function Chat({
         text: replyText || '', // Assuming the response has a text property
         sender: {
           id: 'system_message_id',
-          name: 'Sage'
+          name: 'Syntour'
           // avatar: "", // Or insert a URL of an avatar for the 'system' sender
         }
       }

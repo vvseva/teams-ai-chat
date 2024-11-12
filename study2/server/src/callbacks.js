@@ -7,8 +7,8 @@ Empirica.onGameStart(({ game }) => {
       task: "AICHAT",
   })
 
-  round.addStage({ name: "Intro", duration: 300 });
-  round.addStage({ name: "Activity", duration: 12000 });
+  round.addStage({ name: "Intro", duration: 12000 });
+  // round.addStage({ name: "Activity", duration: 12000 });
 
   // const round = game.addRound({
   //   name: "Round 1 - Jelly Beans",
@@ -29,12 +29,12 @@ Empirica.onRoundStart(({ round }) => {
 });
 
 Empirica.onStageStart(({ stage }) => {
-    if (stage.get("name") === "Activity") {
+    if (stage.get("name") === "Intro") {
         stage.append("chat", { // note: maybe do hardcode chat-teamid
-            text: "Hi team! I'm Sage, your AI team member. After analyzing the data and team dynamics, I recommend choosing Eredania as the landing location for the mission. What are your thoughts?",
+            text: "Hi team! I'm Syntour, your AI team member. What trends are emerging in your discussion?",
             sender: {
                 id: 'system_message_id',
-                name: 'Sage'
+                name: 'Syntour'
             }
         });
     } else {
@@ -50,7 +50,7 @@ Empirica.onRoundEnded(({ round }) => {});
 Empirica.onGameEnded(({ game }) => {});
 
 // Note: this is not the actual number of beans in the pile, it's a guess...
-const jellyBeansCount = 634;
+// const jellyBeansCount = 634;
 
 // function calculateJellyBeansScore(stage) {
 //   if (

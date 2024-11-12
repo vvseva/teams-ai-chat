@@ -1,12 +1,14 @@
-import { useGame } from "@empirica/core/player/classic/react";
+import {useGame, useStage} from "@empirica/core/player/classic/react";
 import { Chat } from "./components/task/Chat";
 
 import React from "react";
 import { Profile } from "./Profile";
 import { Stage } from "./Stage";
+// import {Intro} from "./stages/Intro.jsx";
 
 export function Game() {
   const game = useGame();
+  const stage = useStage();
   const { playerCount } = game.get("treatment");
 
   return (
@@ -18,9 +20,9 @@ export function Game() {
         </div>
       </div>
 
-      {playerCount > 1 && (
+      {stage.get("name") === "Intro" && (
         <div className="h-full w-128 border-l flex justify-center items-center">
-          <Chat scope={game} attribute="chat" />
+          <Chat scope={stage} attribute="chat" includeAI = "true"/>
         </div>
       )}
     </div>
